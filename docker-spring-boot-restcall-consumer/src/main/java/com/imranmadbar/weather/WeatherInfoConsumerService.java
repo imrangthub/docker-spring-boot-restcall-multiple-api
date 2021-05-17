@@ -17,7 +17,7 @@ public class WeatherInfoConsumerService {
 	public String getWeatherInfo() throws RestClientException, IOException {
 
 		String resDate = "";
-		String baseUrl = "http://localhost:8181/get-weather-info";
+		String baseUrl = "http://docker-spring-boot-restcall-producer:8181/get-weather-info";
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<String> response = null;
 
