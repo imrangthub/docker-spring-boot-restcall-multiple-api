@@ -5,6 +5,7 @@ Docker Multiple container Rest API calling
 # Build Images
 -------------------------------------------------
 =>docker image build -t imranmadbar/docker-spring-boot-restcall-producer .
+
 =>docker image build -t imranmadbar/docker-spring-boot-restcall-consumer .
 
 
@@ -16,6 +17,7 @@ Docker Multiple container Rest API calling
 # Run Docker images in a network for the container
 -------------------------------------------------
 =>docker container run --network consumer-producer-net --name docker-spring-boot-restcall-producer -p 8080:8080 -d imranmadbar/docker-spring-boot-restcall-producer
+
 =>docker container run --network consumer-producer-net --name docker-spring-boot-restcall-consumer -p 8282:8282 -d imranmadbar/docker-spring-boot-restcall-consumer
 
 
