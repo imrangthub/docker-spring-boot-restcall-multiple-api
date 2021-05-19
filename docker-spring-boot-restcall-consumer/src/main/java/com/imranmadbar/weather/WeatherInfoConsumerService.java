@@ -25,11 +25,11 @@ public class WeatherInfoConsumerService {
 		try {
 			response = restTemplate.exchange(baseUrl, HttpMethod.GET, getHeaders(), String.class);
 		} catch (Exception ex) {
-			System.out.println("Producer service not avalable !");
+			System.out.println("Producer service not available !");
 			System.out.println(ex);
 		}
 		if(response == null) {
-			return "Producer service not avalable !";
+			return "Producer service not available !";
 		}
 		System.out.println("ResponseBody:"+response.getBody());
 		
