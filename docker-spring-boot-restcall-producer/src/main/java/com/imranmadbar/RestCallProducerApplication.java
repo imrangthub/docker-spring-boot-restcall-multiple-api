@@ -9,6 +9,7 @@ public class RestCallProducerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestCallProducerApplication.class, args);
+		System.out.println("Producer Application Run Successfully Done !");
 	}
 
 }

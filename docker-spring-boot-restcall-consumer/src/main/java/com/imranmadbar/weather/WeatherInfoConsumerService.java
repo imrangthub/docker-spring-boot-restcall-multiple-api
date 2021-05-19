@@ -17,6 +17,7 @@ public class WeatherInfoConsumerService {
 	public String getWeatherInfo() throws RestClientException, IOException {
 
 		String resDate = "";
+//		String baseUrl = "http://localhost:8181/get-weather-info";
 		String baseUrl = "http://docker-spring-boot-restcall-producer:8181/get-weather-info";
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<String> response = null;
@@ -24,7 +25,11 @@ public class WeatherInfoConsumerService {
 		try {
 			response = restTemplate.exchange(baseUrl, HttpMethod.GET, getHeaders(), String.class);
 		} catch (Exception ex) {
+			System.out.println("Producer service not avalable !");
 			System.out.println(ex);
+		}
+		if(response == null) {
+			return "Producer service not avalable !";
 		}
 		System.out.println("ResponseBody:"+response.getBody());
 		

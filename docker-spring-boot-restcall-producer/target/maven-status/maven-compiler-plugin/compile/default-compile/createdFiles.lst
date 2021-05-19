@@ -1,0 +1,4 @@
+com\imranmadbar\weather\WeatherDto.class
+com\imranmadbar\RestCallProducerApplication.class
+com\imranmadbar\weather\WeatherInfoProducerService.class
+com\imranmadbar\weather\WeatherInfoProducerController.class
